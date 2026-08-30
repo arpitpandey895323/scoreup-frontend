@@ -8,8 +8,7 @@ import { Apple, Play } from "lucide-react"
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-dark-green py-24 md:py-32">
-      {/* soft radial glow */}
+    <section className="relative overflow-hidden bg-dark-green py-20 sm:py-24 md:py-32">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"
@@ -29,26 +28,26 @@ export function FinalCTA() {
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.1}>
-          <div className="mt-12 flex flex-col items-center justify-center gap-10 md:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-center gap-8 sm:gap-10 md:flex-row">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 120, damping: 14 }}
-              className="rounded-3xl bg-surface p-5 shadow-2xl"
+              className="relative shrink-0 rounded-3xl bg-surface p-4 shadow-2xl sm:p-5"
             >
-              <QRCode className="w-40" />
+              <QRCode value="https://scoreuptoday.app" size={168} className="h-40 w-40 max-w-full" />
             </motion.div>
 
-            <div className="flex flex-col gap-3">
-              <Button variant="light" size="lg" className="min-w-56 justify-start gap-3">
+            <div className="flex w-full max-w-xs flex-col gap-3">
+              <Button variant="light" size="lg" className="w-full justify-start gap-3">
                 <Apple className="size-5" />
                 <span className="flex flex-col items-start leading-none">
                   <span className="text-[11px] font-normal opacity-70">Download on the</span>
                   <span className="text-base font-semibold">App Store</span>
                 </span>
               </Button>
-              <Button variant="light" size="lg" className="min-w-56 justify-start gap-3">
+              <Button variant="light" size="lg" className="w-full justify-start gap-3">
                 <Play className="size-5" />
                 <span className="flex flex-col items-start leading-none">
                   <span className="text-[11px] font-normal opacity-70">Get it on</span>

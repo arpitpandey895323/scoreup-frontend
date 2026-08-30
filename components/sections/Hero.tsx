@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Star } from 'lucide-react'
 import { Button } from '@/components/Button'
-import { ScoreCard3D } from '@/components/ScoreCard3D'
+import { ScoreIllustration } from '@/components/ScoreIllustration'
 import { fadeUp, staggerContainer } from '@/lib/animations'
 
 export function Hero() {
@@ -70,9 +70,9 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto h-[380px] w-full max-w-md sm:h-[460px] lg:h-[520px]"
+          className="relative mx-auto w-full max-w-sm sm:max-w-md"
         >
-          <ScoreCard3D />
+          <ScoreIllustration />
         </motion.div>
       </div>
     </section>
