@@ -8,22 +8,22 @@ import { Apple, Play } from "lucide-react"
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-brand py-24 md:py-32">
+    <section className="relative overflow-hidden bg-dark-green py-24 md:py-32">
       {/* soft radial glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
           background:
-            "radial-gradient(600px circle at 50% 0%, color-mix(in oklch, var(--color-brand-foreground) 18%, transparent), transparent 70%)",
+            "radial-gradient(600px circle at 50% 0%, rgba(22,166,90,0.35), transparent 70%)",
         }}
       />
       <div className="relative mx-auto max-w-4xl px-6 text-center">
         <RevealOnScroll>
-          <h2 className="text-balance font-sans text-4xl font-semibold tracking-tight text-brand-foreground md:text-5xl">
+          <h2 className="text-balance font-sans text-4xl font-semibold tracking-tight text-surface md:text-5xl">
             Your better financial life is one tap away
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-brand-foreground/70">
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-surface/70">
             Scan the code or grab ScoreUp Today from your app store. Free to start, no card required.
           </p>
         </RevealOnScroll>
@@ -35,20 +35,20 @@ export function FinalCTA() {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 120, damping: 14 }}
-              className="rounded-3xl bg-brand-foreground p-5 shadow-2xl"
+              className="rounded-3xl bg-surface p-5 shadow-2xl"
             >
-              <QRCode value="https://scoreuptoday.app" size={168} />
+              <QRCode className="w-40" />
             </motion.div>
 
             <div className="flex flex-col gap-3">
-              <Button variant="onDark" size="lg" className="min-w-56 justify-start gap-3">
+              <Button variant="light" size="lg" className="min-w-56 justify-start gap-3">
                 <Apple className="size-5" />
                 <span className="flex flex-col items-start leading-none">
                   <span className="text-[11px] font-normal opacity-70">Download on the</span>
                   <span className="text-base font-semibold">App Store</span>
                 </span>
               </Button>
-              <Button variant="onDark" size="lg" className="min-w-56 justify-start gap-3">
+              <Button variant="light" size="lg" className="min-w-56 justify-start gap-3">
                 <Play className="size-5" />
                 <span className="flex flex-col items-start leading-none">
                   <span className="text-[11px] font-normal opacity-70">Get it on</span>

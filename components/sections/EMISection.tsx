@@ -1,6 +1,6 @@
 import { ArrowRight, BellRing, Coins, ShieldCheck } from 'lucide-react'
 import { Button } from '@/components/Button'
-import { Phone3D } from '@/components/Phone3D'
+import { ChatDiagram } from '@/components/ChatDiagram'
 import { RevealOnScroll } from '@/components/RevealOnScroll'
 import { fadeUp } from '@/lib/animations'
 
@@ -47,8 +47,8 @@ export function EMISection() {
           </div>
         </RevealOnScroll>
 
-        <div className="relative mx-auto h-[440px] w-full max-w-sm sm:h-[520px]">
-          <Phone3D />
+        <div className="flex justify-center lg:justify-end">
+          <ChatDiagram className="h-[440px] sm:h-[480px]" />
         </div>
       </div>
     </section>
